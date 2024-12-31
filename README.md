@@ -6,24 +6,24 @@ Selamat datang di proyek **Restaurant Order System - PHP Native**! 🎉 Ini adal
 
 1. **Clone Repository**:
     ```bash
-    git clone https://github.com/alfian742/restaurant-order-system.git
+    git clone https://github.com/alfian742/ros-pos.git
     ```
 
 2. **Masuk ke Direktori Proyek**:
     ```bash
-    cd restaurant-order-system
+    cd ros-pos
     ```
 
 3. **Konfigurasi Database**:
     - Buat database baru di MySQL.
-    - Impor file `restaurant.sql` yang ada di folder `config/database` ke database baru tersebut.
+    - Impor file `restaurant_new.sql` yang ada di folder `config/database` ke database baru tersebut.
 
 4. **Sesuaikan Konfigurasi**:
     - Edit file `config.php` untuk menambahkan detail koneksi database Anda.
 
 5. **Jalankan Aplikasi**:
     - Pastikan server web lokal seperti Apache atau Nginx aktif. Contoh perangkat lunak yang dapat digunakan adalah Laragon, XAMPP, atau MAMP.
-    - Akses aplikasi melalui browser dengan membuka `http://localhost/restaurant-order-system`.
+    - Akses aplikasi melalui browser dengan membuka `http://localhost/ros-pos`.
 
 ## 📖 Panduan Penggunaan
 
