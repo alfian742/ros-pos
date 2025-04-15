@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 28 Sep 2024 pada 10.26
+-- Waktu pembuatan: 15 Apr 2025 pada 22.21
 -- Versi server: 8.0.30
 -- Versi PHP: 7.4.33
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `restaurant_new`
+-- Database: `restaurant_order_system`
 --
 
 -- --------------------------------------------------------
@@ -67,17 +67,12 @@ CREATE TABLE `keranjang` (
 --
 
 INSERT INTO `keranjang` (`id_keranjang`, `id_user`, `id_pesanan`, `id_menu`, `jumlah`, `status`) VALUES
-(1, '66f4fa8ad8d68', 'OR66F6739B34853', 10, 2, 'Sudah Dipesan'),
-(2, '66f4fa8ad8d68', 'OR66F6739B34853', 3, 2, 'Sudah Dipesan'),
-(3, '66f4fa8ad8d68', 'OR66F673CE85CA3', 8, 1, 'Sudah Dipesan'),
-(4, '66f4fa8ad8d68', 'OR66F673CE85CA3', 15, 1, 'Sudah Dipesan'),
-(5, '66f4fa8ad8d68', 'OR66F673FF8A815', 10, 3, 'Sudah Dipesan'),
-(6, '66f4fa8ad8d68', 'OR66F673FF8A815', 9, 1, 'Sudah Dipesan'),
-(7, '66f4facc15e52', 'OR66F674D90ACEA', 15, 5, 'Sudah Dipesan'),
-(8, '66f4facc15e52', 'OR66F674D90ACEA', 11, 3, 'Sudah Dipesan'),
-(9, '66f4facc15e52', 'OR66F6763DE61A2', 13, 1, 'Sudah Dipesan'),
-(10, '66f4fa8ad8d68', 'OR66F67A4538EBF', 4, 1, 'Sudah Dipesan'),
-(12, '66f4facc15e52', 'OR66F68178CE7FB', 15, 1, 'Sudah Dipesan');
+(1, '67fed8b11a538', 'OR67FED9D56C528', 14, 3, 'Sudah Dipesan'),
+(2, '67fed8b11a538', 'OR67FED9D56C528', 11, 3, 'Sudah Dipesan'),
+(3, '67fed8b11a538', 'OR67FED9D56C528', 8, 3, 'Sudah Dipesan'),
+(4, '67fed8b11a538', 'OR67FED9D56C528', 4, 3, 'Sudah Dipesan'),
+(5, '67fed8665cee4', 'OR67FEDAB74F57B', 10, 4, 'Sudah Dipesan'),
+(6, '67fed8665cee4', 'OR67FEDAB74F57B', 8, 4, 'Sudah Dipesan');
 
 -- --------------------------------------------------------
 
@@ -115,7 +110,7 @@ INSERT INTO `menu` (`id_menu`, `tanggal_buat`, `nama_menu`, `kategori`, `harga`,
 (12, '2024-09-21 19:43:52', 'Cheese Blast Burger', 'Hot Kitchen', 83000, 'Premium beef burger with melted cheese on top, smoked beef, caramelized onions, housemade sauce, french fries, and salad.', 'Tersedia', '66eeb1789fdb0.jpg'),
 (13, '2024-09-21 19:48:35', 'Red Scarlett', 'Drink', 68000, 'Strawberry flavoured soda with fruit bits.', 'Tersedia', '66eeb2930f173.jpg'),
 (14, '2024-09-21 19:49:30', 'Purple Magic', 'Drink', 68000, 'Blueflower pea tea soda with peach, lemon and strawberry bits.', 'Tersedia', '66eeb2cacfee1.jpg'),
-(15, '2024-09-21 19:50:08', 'Golden Hour', 'Drink', 34000, 'Peach and orange sparkling soda.', 'Tersedia', '66eeb61844626.jpg');
+(15, '2024-09-21 19:50:08', 'Golden Hour', 'Drink', 34000, 'Peach and orange sparkling soda.', 'Tidak Tersedia', '66eeb61844626.jpg');
 
 -- --------------------------------------------------------
 
@@ -138,13 +133,8 @@ CREATE TABLE `pembayaran` (
 --
 
 INSERT INTO `pembayaran` (`id_pembayaran`, `id_pesanan`, `id_user`, `tanggal`, `metode_pembayaran`, `jumlah_pembayaran`, `status`) VALUES
-('ST66F6739B3485D', 'OR66F6739B34853', '66f4fa8ad8d68', '2024-09-27 16:58:03', 'Cash', 260000, 'Paid'),
-('ST66F673CE85CAD', 'OR66F673CE85CA3', '66f4fa8ad8d68', '2024-09-27 16:58:54', 'Cash', 100000, 'Paid'),
-('ST66F673FF8A81E', 'OR66F673FF8A815', '66f4fa8ad8d68', '2024-09-27 16:59:43', 'QRIS', 275000, 'Paid'),
-('ST66F674D90ACF5', 'OR66F674D90ACEA', '66f4facc15e52', '2024-09-27 17:03:21', 'Debit Card', 400000, 'Paid'),
-('ST66F6763DE61AD', 'OR66F6763DE61A2', '66f4facc15e52', '2024-09-27 17:09:17', 'QRIS', 70000, 'Paid'),
-('ST66F67A4538ECB', 'OR66F67A4538EBF', '66f4fa8ad8d68', '2024-09-27 17:26:29', 'Debit Card', 60000, 'Paid'),
-('ST66F68178CE805', 'OR66F68178CE7FB', '66f4facc15e52', '2024-09-27 17:57:12', '', 0, 'Unpaid');
+('ST67FED9D56C532', 'OR67FED9D56C528', '67fed8b11a538', '2025-04-16 06:12:37', 'Cash', 720000, 'Paid'),
+('ST67FEDAB74F586', 'OR67FEDAB74F57B', '67fed8665cee4', '2025-04-16 06:16:23', 'Cash', 480000, 'Paid');
 
 -- --------------------------------------------------------
 
@@ -167,13 +157,8 @@ CREATE TABLE `pesanan` (
 --
 
 INSERT INTO `pesanan` (`id_pesanan`, `id_user`, `tanggal`, `tipe_pesanan`, `nomor_meja`, `total_pembayaran`, `status`) VALUES
-('OR66F6739B34853', '66f4fa8ad8d68', '2024-09-27 16:58:03', 'Dine In', '1', 260000, 'Completed'),
-('OR66F673CE85CA3', '66f4fa8ad8d68', '2024-09-27 16:58:54', 'Dine In', '1', 82000, 'Completed'),
-('OR66F673FF8A815', '66f4fa8ad8d68', '2024-09-27 16:59:43', 'Takeaway', '', 274000, 'Completed'),
-('OR66F674D90ACEA', '66f4facc15e52', '2024-09-27 17:03:21', 'Takeaway', '', 365000, 'Completed'),
-('OR66F6763DE61A2', '66f4facc15e52', '2024-09-27 17:09:17', 'Dine In', '1', 68000, 'Completed'),
-('OR66F67A4538EBF', '66f4fa8ad8d68', '2024-09-27 17:26:29', 'Dine In', '3', 58000, 'Pending'),
-('OR66F68178CE7FB', '66f4facc15e52', '2024-09-27 17:57:12', 'Takeaway', '', 34000, 'Pending');
+('OR67FED9D56C528', '67fed8b11a538', '2025-04-16 06:12:37', 'Dine In', '1', 717000, 'Completed'),
+('OR67FEDAB74F57B', '67fed8665cee4', '2025-04-16 06:16:23', 'Dine In', '1', 480000, 'Completed');
 
 -- --------------------------------------------------------
 
@@ -194,9 +179,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `nama_lengkap`, `email`, `password`, `level`) VALUES
-('66f4fa8ad8d68', 'Administrator', 'admin@gmail.com', '$2y$10$jPkLiqX20ihTbgyDQ6xVpu1UuK5Z5pvVAPnZrLAtg.hX9yi413gh.', 'Admin'),
-('66f4faaf0478c', 'Kasir', 'kasir@gmail.com', '$2y$10$bhXRB5L5YE6pMPVsTZH/qu80Jjy8a94AawWjTzI9qjcdcQZPoJ.UO', 'Cashier'),
-('66f4facc15e52', 'User', 'user@gmail.com', '$2y$10$5WD0EGUb03IajDQC0JK9H./w70ldMGDKlS6YPULNnUOFWYwg6U7FC', 'User');
+('67fed8665cee4', 'Administrator', 'admin@gmail.com', '$2y$10$ZFY6rQWQaF/aGDRW5cawTuNMBHzLhJgh/PYDfk/2KlCQF8tVlsyky', 'Admin'),
+('67fed8b11a538', 'Novi', 'user@gmail.com', '$2y$10$AYU8rH1qdBlMPJauhHsYZOhc/u8Hsivuw2rh4hg8KeT3u7IRPiy9K', 'User'),
+('67feda46f3158', 'Asdianti', 'cashier@gmail.com', '$2y$10$Hmoeu1bCxszraMogPOgDT.T2TvTl9jRWr4ARvjDuXvGgNxBXXklca', 'Cashier');
 
 --
 -- Indexes for dumped tables
@@ -258,7 +243,7 @@ ALTER TABLE `galeri`
 -- AUTO_INCREMENT untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id_keranjang` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_keranjang` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `menu`

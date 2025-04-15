@@ -6,13 +6,14 @@ date_default_timezone_set('Asia/Makassar');
 $env = 'development'; // Ubah menjadi 'production' jika dalam tahap produksi
 
 // Konfigurasi base url
-$base_url = 'http://localhost/restaurant-new'; // Ubah sesuai domain anda
+// Pastikan untuk mengganti URL pada file .htacces agar sesuai dengan Base URL yang sama.
+$base_url = 'http://localhost/restaurant-order-system'; // Ubah sesuai domain anda
 
 // Konfigurasi database
 $hostname   = 'localhost';
 $username   = 'root';
 $password   = '';
-$dbname     = 'restaurant_new';
+$dbname     = 'restaurant_order_system';
 
 // Mengaktifkan laporan error jika mode 'development'
 if ($env === 'development') {

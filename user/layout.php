@@ -164,7 +164,7 @@
                     <span class="text-light"><i class="fas fa-copyright me-1"></i> <?= date('Y'); ?> Pan & Co. Hak cipta dilindungi.</span>
                 </div>
                 <div class="col-lg-3 text-center text-lg-end">
-                    <span class="text-light">Desain oleh <a class="border-bottom text-secondary" href="https://www.instagram.com/opi___11/">Novi</a></span>
+                    <span class="text-light">Desain oleh <a class="border-bottom text-secondary" href="#">Alfian</a></span>
                 </div>
             </div>
         </div>

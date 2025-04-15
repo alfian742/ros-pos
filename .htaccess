@@ -1,0 +1,19 @@
+# Mencegah Akses ke folder 'config' dengan RewriteRule
+RewriteEngine On
+
+# Mencegah akses ke folder config/ dan components/
+RewriteRule ^config/ - [F,L]
+RewriteRule ^(user|auth|dashboard)/components/ - [F,L]
+
+# Mencegah akses ke file layout.php
+RewriteRule ^(user|auth|dashboard|error)/layout.php$ - [F,L]
+
+# Mencegah akses ke file .htaccess itu sendiri
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# Mengalihkan ke halaman 403 jika ada akses yang dilarang
+# Contoh Base URL: 'http://localhost/project-name/'
+# Pastikan untuk mengganti URL pada file config/config.php agar sesuai dengan Base URL yang sama.
+ErrorDocument 403 http://localhost/restaurant-order-system/error/403.php

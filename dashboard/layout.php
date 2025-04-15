@@ -168,7 +168,7 @@
                 &copy; <?= date('Y'); ?> Pan & Co. Hak cipta dilindungi.
             </div>
             <div class="fw-semibold me-4">
-                Desain oleh <a class="border-bottom text-primary" href="https://www.instagram.com/opi___11/">Novi</a>
+                Desain oleh <a class="border-bottom text-primary" href="#">Alfian</a>
             </div>
         </div>
     </footer><!-- End Footer -->
